@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+}
+
+:root {
+  --highlight-color:orangered;
+  --text-color:lightgrey;
+  --background-color1:#112233;
+  --background-color2:#334455;
+}
+
+body {
+  font-family:Roboto, sans-serif;
+  text-align:center;
+  background-color:var(--background-color1);
+  color:var(--text-color);
+  overflow-x: hidden;
+}
+
+
+h1, h2 {
+  color:var(--highlight-color);
+}
+
+h1 {
+  font-size:5rem;
+}
+
+h2 {
+  font-size:4rem;
+  margin-bottom:3rem;
+  padding:1rem 0;
+}
+
+h3 {
+  font-size:3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+  position:fixed;
+  width:100%;
+  text-align:right;
+  font-family:Roboto, sans-serif;
+  background-color:var(--highlight-color);
+  z-index:1;
+  border-radius:0 0 8px 8px;
+  opacity: 0.8;
+}
+
+nav a {
+  color:var(--background-color1);
+  font-size:1.5rem;
+  text-decoration: none;
+  padding:0 0.8rem;
+}
+
+/* WELCOME */
+#welcome-section {
+  height:100vh;
+  padding-top:20vh;
+  background:linear-gradient(var(--background-color1),var(--background-color2));
+}
+
+.about-me {
+  padding:1rem 5rem;
+}
+
+.location {
+  display: flex;
+  justify-content:center;
+  align-items: center; 
+  gap: 10px;
+  margin:1rem 0;
+}
+.location img {
+  width:1rem;
+  height:1rem;
+}
+
+#profile-link img {
+  width:3rem;
+  height:3rem;
+  margin:0 0.5rem;
+  border-radius:20%;
+  background-color:var(--text-color);
+}
+
+/* SKILLS */
+#skills {
+  padding:5rem 0px;
+}
+
+.skills {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: flex-start;
+  gap:1rem;
+  padding:0 5rem;
+}
+
+.skill {
+  width:4rem;
+}
+
+.skill:hover {
+  width:4rem;
+  background-color:var(--background-color2);
+}
+
+.skill-logo {
+  width:3rem;
+  height:3rem;
+}
+
+/* PROJECTS */
+#projects {
+  padding:5rem 0px;
+  font-family:Roboto, sans-serif;
+  /*background:linear-gradient(var(--background-color2),var(--background-color1));*/
+}
+
+.project-tiles {
+  height:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: center;
+  gap:2rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.project-tile {
+  width:45%;
+  height:45vh;
+  padding:10px;
+  max-width:400px;
+  background-color:var(--background-color2);
+  border-radius:5%;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-title {
+  padding-top:0.5rem;
+  font-size:2rem;
+  color:var(--text-color);
+}
+
+.project-description {
+  position:relative;
+  width:100%;
+  height:100%;
+  top:-100%;
+  font-size:1.5rem;
+  color:var(--text-color);
+  padding:1rem;
+  border-radius:5%;
+  background-color:var(--background-color1);
+  opacity: 0;
+  visibility: hidden; 
+  overflow:hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.tech-stack {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.last-line {
+  display: block;
+  margin-top: 2rem;
+}
+
+.project-tile:hover {
+  width:50%;
+  height:50vh;
+  background-color:var(--highlight-color); 
+}
+
+.project-tile:hover .project-description {
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.project-tile img { 
+  width:100%;
+  height:80%;
+  border: 5px solid var(--highlight-color);
+  border-radius:10%;
+  object-fit: cover;
+}
+
+@media (max-width:520px) {
+  .project-tiles {
+    flex-direction:column;
+  }
+
+  .project-tile {
+    width:100%;
+  }
+
+  .project-tile:hover {
+    width:100%;
+  }
+
+  h1 {
+    font-size:3rem;
+  }
+
+  h2 {
+    font-size:2rem;
+   
+  }
+
+  h3 {
+    font-size:1rem;
+  }
+
+  .about-me {
+    padding:1rem 1rem;
+  }
+
+}
