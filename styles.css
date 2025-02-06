@@ -69,6 +69,11 @@ nav a {
   background:linear-gradient(var(--background-color1),var(--background-color2));
 }
 
+.profile-picture {
+  width: 100px;
+  border-radius: 50%;
+}
+
 .about-me {
   padding:1rem 5rem;
 }
