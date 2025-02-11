@@ -162,19 +162,20 @@ nav a {
 
 .project-description {
   position:absolute;
-  width:100%;
-  height:100%;
-  top: 0;
-  left: 0;
+  width:calc(100% - 1rem);
+  height:calc(100% - 1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size:1.5rem;
   color:var(--text-color);
-  padding:1rem;
+  padding-top: 1rem;
   border-radius:5%;
   background-color:var(--background-color1);
   opacity: 0;
   visibility: hidden; 
   overflow:hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .tech-stack {
